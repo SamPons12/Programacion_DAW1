@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "src/Mastermind",
+        "src/Exceptions",
+        "src/ExQuicksort",
+        "src/Ex7z8",
+        "src/ModelExamen"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": []
+}
