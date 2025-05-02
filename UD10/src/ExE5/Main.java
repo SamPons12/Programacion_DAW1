@@ -3,6 +3,7 @@ package ExE5;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.HashMap;
 
 public class Main {
@@ -11,6 +12,7 @@ public class Main {
     HashMap<String, Integer> contadorMesos = new HashMap<>();
 
     try(BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\Sam\\Downloads\\UD10-temperatures.txt"))){
+      System.out.println(LocalDate.now());
       String liniea = br.readLine();
       String[] mesos = liniea.split(",");
 
