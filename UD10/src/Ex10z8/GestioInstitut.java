@@ -12,7 +12,7 @@ public class GestioInstitut {
     static Scanner sc = new Scanner(System.in);
 
     static ArrayList<Alumno> alumnos = new ArrayList<>();
-    static ArrayList<Profesor> profesores = new ArrayList<>();
+    static ArrayList<Missatge> profesores = new ArrayList<>();
 
     public static void main(String[] args) {
         File f  = null;
@@ -26,7 +26,7 @@ public class GestioInstitut {
                 fis = new FileInputStream(f);
                 input = new ObjectInputStream(fis);
                 alumnos = (ArrayList<Alumno>) input.readObject();
-                profesores = (ArrayList<Profesor>) input.readObject();
+                profesores = (ArrayList<Missatge>) input.readObject();
 
             }else{
                 f.createNewFile();
@@ -55,7 +55,7 @@ public class GestioInstitut {
 
             switch (opcion){
                 case 1:
-                    profesores.add((Profesor) crearProfesor());
+                    profesores.add((Missatge) crearProfesor());
                     break;
                 case 2:
                     alumnos.add((Alumno) crearAlumno());
@@ -88,7 +88,7 @@ public class GestioInstitut {
         System.out.println("Ingrese el modulo del profesor: ");
         String modulo = sc.nextLine();
 
-        return new Profesor(nombre, dni, edad, modulo);
+        return new Missatge(nombre, dni, edad, modulo);
     }
 
     public static Persona crearAlumno(){
@@ -116,7 +116,7 @@ public class GestioInstitut {
             alumno.mostrarDades();
        }
 
-       for (Profesor profesor : profesores) {
+       for (Missatge profesor : profesores) {
             System.out.println("----------------PROFE------------");
             profesor.mostrarDades();
        }

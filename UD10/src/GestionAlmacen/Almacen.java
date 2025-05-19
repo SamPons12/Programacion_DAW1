@@ -9,7 +9,8 @@ public class Almacen {
     HashSet<Producte> almacen = new HashSet<>();
     
     try {
-      BufferedReader br = new BufferedReader(new FileReader(""));
+    
+      BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\Sam\\Downloads\\almacenBrut.txt"));
 
       String liniea;
       String[] dades;
